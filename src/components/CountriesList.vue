@@ -1,8 +1,8 @@
 <template lang='html'>
   <div>
-    <ul>
-        <list-item v-for="(country, index) in countries" :country="country" :key="index"></list-item>
-    </ul>
+        <ul>
+            <list-item v-for:="country in countries"></list-item>
+        </ul>
     </div>
 </template>
 
@@ -19,6 +19,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>

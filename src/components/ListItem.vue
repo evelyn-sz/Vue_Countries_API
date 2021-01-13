@@ -8,6 +8,7 @@
 <script>
 
 import { eventBus } from '../main.js';
+import CountryDetail from '../components/CountryDetail';
 
 export default {
     name: 'list-item',
@@ -23,6 +24,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>

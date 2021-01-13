@@ -1,5 +1,11 @@
 <template lang='html'>
   <div class='main-container'>
+    <label for="country-select">Select Country</label>
+      <select v-model="selectedCountry">
+        <option disabled value="">Select country</option>
+        <option v-for="country in countries">{{ country.name }}</option>
+     </select>
+
      <countries-list :countries="countries"></countries-list>
      <country-detail :country="selectedCountry"></country-detail>
   </div>  
@@ -10,6 +16,7 @@
 import { eventBus } from './main.js';
 import CountriesList from './components/CountriesList.vue';
 import CountryDetail from './components/CountryDetail.vue';
+import ListItem from './components/ListItem.vue';
 
 export default {
   name: "app",
@@ -31,7 +38,8 @@ export default {
   },
   components: {
     "countries-list": CountriesList,
-    "country-detail": CountryDetail
+    "country-detail": CountryDetail,
+    "list-item": ListItem
   }
 }
 </script>
